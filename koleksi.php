@@ -94,7 +94,8 @@ $query = mysqli_query($koneksi, "SELECT * FROM buku");
 
                 <div class="action-box">
                     <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-success">Edit</a>
-                    <a href="hapus.php?id=<?php echo $data['id']; ?>"class="btn btn-warning">Hapus</a>
+                    <a href="hapus.php?id=<?php echo $data['id']; ?>"class="btn btn-warning" onclick="return confirm
+                    ('Yakin ingin menghapus data ini?')">Hapus</a>
                 </div>
 
             </div>

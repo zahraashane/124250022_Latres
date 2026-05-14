@@ -92,7 +92,8 @@ $query = mysqli_query($koneksi, "SELECT * FROM peminjaman");
                         if($data['status'] == 'Dipinjam'){
                     ?>
 
-                    <a href="peminjaman.php?kembalikan=<?php echo $data['id']; ?>" class="btn btn-info">Kembalikan</a>
+                    <a href="peminjaman.php?kembalikan=<?php echo $data['id']; ?>" class="btn btn-info" onclick="return confirm
+                    ('Yakin ingin mengembalikan buku ini?')">Kembalikan</a>
                     
                     <?php } else { ?>
                     
